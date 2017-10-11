@@ -1,4 +1,4 @@
-## cachematrix calculates and caches a matrix's inverse
+## cachematrix can calculate and cache a matrix's inverse
 
 ## makeCacheMatrix(x) returns a list of functions for inspecting and editing x (a matrix)
 makeCacheMatrix <- function(x = matrix()) {
@@ -20,7 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
   ## makeCacheMatrix() returns a list of functions
   list(set=set, get=get, setinv=setinv, getinv=getinv)
 }
-## cacheSolve(y, ...) returns the inverse of makeCacheMatrix(x)$get() (x)
+## cacheSolve(y, ...) gets or calculates and returns the inverse of x in y (makeCacheMatrix(x)) and caches it in y
 cacheSolve <- function(y, ...) {
   ## i is y's (makeCacheMatrix(x)'s) cached inverse
   i<-y$getinv()
