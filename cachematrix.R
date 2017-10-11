@@ -20,6 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
   ## makeCacheMatrix() returns a list of functions
   list(set=set, get=get, setinv=setinv, getinv=getinv)
 }
+
 ## cacheSolve(y, ...) gets or calculates and returns the inverse of x in y (makeCacheMatrix(x)) and caches it in y
 cacheSolve <- function(y, ...) {
   ## i is y's (makeCacheMatrix(x)'s) cached inverse
@@ -35,7 +36,7 @@ cacheSolve <- function(y, ...) {
   m<-y$get()
     ## i is m's inverse
   i<-solve(m)
-    ## y's matrix parameter is i
+    ## y's inverse matrix is i
   y$setinv(i)
     ## cacheSolve(y, ...) returns i
   i
