@@ -2,7 +2,7 @@
 
 ## makeCacheMatrix(x) returns a list of functions for inspecting and editing x (a matrix)
 makeCacheMatrix <- function(x = matrix()) {
-  ## inv is the cache for x's inverse
+  ## inv is the cache for x's inverse (note makeCacheMatrix doesn't calculate this)
   inv<-NULL
   ## set(y) changes x to y and clears inv
   set<-function(y){
